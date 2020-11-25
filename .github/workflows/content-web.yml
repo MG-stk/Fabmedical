@@ -11,7 +11,7 @@ on:
         default: warning
         description: "Log level"
         required: true 
-env: 
+env:
   containerRegistry: "acrfabmedicalstk.azurecr.io"
   containerRegistryName: "acrfabmedicalstk"
   dockerfilePath: ./content-web
