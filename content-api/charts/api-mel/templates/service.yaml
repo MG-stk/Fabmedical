@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: api-mel
   namespace: mel
-  selfLink: /api/v1/namespaces/mel/services/api-mel
   labels:
     {{- include "api-mel.labels" . | nindent 4 }}
 spec:
