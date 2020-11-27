@@ -1,16 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "api-mel.fullname" . }}
+  name: api-mel
   namespace: mel
+  selfLink: /api/v1/namespaces/mel/services/api-mel
   labels:
     {{- include "api-mel.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
       protocol: TCP
+      targetPort: 3001
       name: http
   selector:
-    {{- include "api-mel.selectorLabels" . | nindent 4 }}
+    api-mel
