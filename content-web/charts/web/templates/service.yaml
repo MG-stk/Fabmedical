@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "web.fullname" . }}
+  namespace: mel
   labels:
     {{- include "web.labels" . | nindent 4 }}
 spec:
